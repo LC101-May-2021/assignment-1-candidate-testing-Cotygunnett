@@ -27,7 +27,7 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-console.log("Hello " + candidateName)
+
 
   let grade;
   
@@ -38,7 +38,7 @@ console.log("Hello " + candidateName)
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  
+ console.log("Hello " + candidateName);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
