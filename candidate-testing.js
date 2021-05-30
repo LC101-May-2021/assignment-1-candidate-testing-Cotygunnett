@@ -19,7 +19,9 @@ let correctAnswers = ["Sally Ride",
                       "Trajectory",
                       "3"];
 let candidateAnswers =[];
-
+let grade;
+let numCorrect = 0;
+const numQuestions = 5;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -35,7 +37,8 @@ for (let i = 0; i < questions.length; i++){
   candidateAnswers.push(input.question(questions[i]));
 }
 
-console.log(candidateAnswers)
+
+
 };
 
 
@@ -43,20 +46,11 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-const numQuestions = 5;
-let numCorrect = 0;
-let grade = 0;
- /* let grade = "incorrect" ;
-  if (candidateAnswer === "Sally Ride"){
-    grade = "correct"
-  } else {
-    grade = "incorrect"
-  }
-  console.log(grade)
 
-  return grade;
-}*/
 
+
+
+ 
 for (i = 0; i < candidateAnswers.length; i++) {
   if (candidateAnswers[i] === correctAnswers[i]) {
     numCorrect++ 
@@ -65,7 +59,7 @@ for (i = 0; i < candidateAnswers.length; i++) {
 
 grade = (numCorrect / numQuestions) * 100
 
-console.log(grade)
+
 
 
  
@@ -81,7 +75,41 @@ function runProgram() {
  console.log("Hello " + candidateName);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
+  
+  
+  console.log(`Candidate Name: ${candidateName}`);
+
+
+console.log(`1) ${questions[0]}`);
+console.log(`Your Answer: ${candidateAnswers[0]}`);
+console.log(`CorrectAnswer: ${correctAnswers[0]}`);
+console.log("\n");
+
+console.log(`2) ${questions[1]} `);
+console.log(`Your Answer: ${candidateAnswers[1]}`);
+console.log(`CorrectAnswer: ${correctAnswers[1]}`);
+console.log("\n");
+
+console.log(`3) ${questions[2]}`);
+console.log(`Your Answer: ${candidateAnswers[2]}`);
+console.log(`CorrectAnswer: ${correctAnswers[2]}`);
+console.log("\n");
+
+console.log(`4) ${questions[3]}`);
+console.log(`Your Answer: ${candidateAnswers[3]}`);
+console.log(`CorrectAnswer: ${correctAnswers[3]}`);
+console.log("\n");
+
+console.log(`5) ${questions[4]}`);
+console.log(`Your Answer: ${candidateAnswers[4]}`);
+console.log(`CorrectAnswer: ${correctAnswers[4]}`);
+console.log("\n");
+
+
+console.log(`>>> Overall Grade: ${grade} (${numCorrect} of 5 responses correct) <<<`);
+console.log
 }
+
 
 // Don't write any code below this line //
 // And don't change these or your program will not run as expected //
