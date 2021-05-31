@@ -13,10 +13,10 @@ let questions = ["Who was the first American woman in space? ",
                  "(5 + 3)/2 * 10 = ?",
               "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?",
                 "What is the minimum crew size for the ISS?"];;
-let correctAnswers = ["Sally Ride",
+let correctAnswers = ["sally ride",
                       "true",
                       "40",
-                      "Trajectory",
+                      "trajectory",
                       "3"];
 let candidateAnswers =[];
 let grade;
@@ -38,6 +38,8 @@ for (let i = 0; i < questions.length; i++){
 }
 
 
+for (i = 0; i < candidateAnswers.length; i++)
+    candidateAnswers[i] = candidateAnswers[i].toLowerCase();
 
 };
 
