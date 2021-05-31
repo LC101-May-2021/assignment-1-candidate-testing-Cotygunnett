@@ -12,7 +12,7 @@ let questions = ["Who was the first American woman in space? ",
                 "True or false: 5 kilometer == 5000 meters?",
                  "(5 + 3)/2 * 10 = ?",
               "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?",
-                "What is the minimum crew size for the ISS?"];;
+                "What is the minimum crew size for the ISS?"];
 let correctAnswers = ["sally ride",
                       "true",
                       "40",
@@ -22,6 +22,7 @@ let candidateAnswers =[];
 let grade;
 let numCorrect = 0;
 const numQuestions = 5;
+let testStatus;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -62,6 +63,12 @@ for (i = 0; i < candidateAnswers.length; i++) {
 grade = (numCorrect / numQuestions) * 100
 
 
+
+if (grade >= 80){
+  testStatus = "Passed";
+} else {
+  testStatus = "failed";
+}
 
 
  
@@ -108,8 +115,8 @@ console.log(`CorrectAnswer: ${correctAnswers[4]}`);
 console.log("\n");
 
 
-console.log(`>>> Overall Grade: ${grade} (${numCorrect} of 5 responses correct) <<<`);
-console.log
+console.log(`>>> Overall Grade: ${grade}% (${numCorrect} of 5 responses correct) <<<`);
+console.log(`>>> Status: ${testStatus} <<<`)
 }
 
 
