@@ -6,7 +6,7 @@ const input = require('readline-sync');
 let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question;
-let correctAnswer = "Sally Ride";
+let correctAnswer;
 let candidateAnswer = [];
 let questions = ["Who was the first American woman in space? ",
                 "True or false: 5 kilometer == 5000 meters? ",
@@ -52,7 +52,7 @@ function gradeQuiz(candidateAnswers) {
 
  
 for (i = 0; i < candidateAnswers.length; i++) {
-  if (candidateAnswers[i].toLocaleLowerCase === correctAnswers[i].toLocaleLowerCase) {
+  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
     numCorrect++ 
   }
 };
