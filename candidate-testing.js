@@ -53,11 +53,11 @@ function gradeQuiz(candidateAnswers) {
 for (i = 0; i < candidateAnswers.length; i++) {
   if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
     numCorrect++ 
-  }
+  } 
 };
 
-grade = (numCorrect / numQuestions) * 100
-
+grade = ((numCorrect / numQuestions) * 100)
+return grade;
 
 };
 
@@ -113,7 +113,10 @@ console.log("\n");
 
 
 console.log(`>>> Overall Grade: ${grade}% (${numCorrect} of 5 responses correct) <<<`);
-console.log(`>>> Status: ${testStatus} <<<`)
+console.log(`>>> Status: ${testStatus} <<<`);
+//console.log(`grade = ${grade}`);
+//console.log(`return grade = ${gradeQuiz(candidateAnswers)}`);
+//console.log(`numCorrect = ${numCorrect}`);
 }
 
 
