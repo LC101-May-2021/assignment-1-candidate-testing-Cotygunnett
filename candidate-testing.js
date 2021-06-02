@@ -57,7 +57,7 @@ for (i = 0; i < candidateAnswers.length; i++) {
   } 
 };
 
-grade = ((numCorrect / numQuestions) * 100)
+grade = numCorrect / numQuestions * 100
 return grade;
 
 };
