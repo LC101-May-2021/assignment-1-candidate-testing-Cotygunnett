@@ -7,7 +7,7 @@ let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question;
 let correctAnswer;
-let candidateAnswer = [];
+let candidateAnswer = ""
 let questions = ["Who was the first American woman in space? ",
                 "True or false: 5 kilometer == 5000 meters? ",
                  "(5 + 3)/2 * 10 = ? ",
