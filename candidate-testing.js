@@ -6,8 +6,8 @@ const input = require('readline-sync');
 let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question = "Who was the first American woman in space? " ;
-let correctAnswer;
-let candidateAnswer = " ";
+let correctAnswer = "Sally Ride";
+let candidateAnswer = "";
 let questions = ["Who was the first American woman in space? ",
                 "True or false: 5 kilometer == 5000 meters? ",
                  "(5 + 3)/2 * 10 = ? ",
@@ -27,6 +27,7 @@ let testStatus;
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 candidateName = input.question("Please enter your name.")
+return candidateName;
 };
 
 function askQuestion() {
@@ -34,8 +35,8 @@ function askQuestion() {
 // candidateAnswer = input.question(question);
 
 
-for (let i = 0; i < questions.length; i++){
-  candidateAnswers.push(input.question(questions[i]));
+for (i = 0; i < questions.length; i++){
+  candidateAnswers.push((input.question(questions[i])));
 }
 
 return candidateAnswers;
@@ -52,7 +53,7 @@ function gradeQuiz(candidateAnswers) {
  
 for (i = 0; i < candidateAnswers.length; i++) {
   if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-    numCorrect++ 
+    numCorrect += 1
   } 
 };
 
@@ -66,7 +67,6 @@ if (grade >= 80){
  
 } else {
   testStatus = "Failed";
- 
 
 };
 
@@ -115,8 +115,10 @@ console.log("\n");
 console.log(`>>> Overall Grade: ${grade}% (${numCorrect} of 5 responses correct) <<<`);
 console.log(`>>> Status: ${testStatus} <<<`);
 console.log(`grade = ${grade}`);
-//console.log(`return grade = ${gradeQuiz(candidateAnswers)}`);
 console.log(`numCorrect = ${numCorrect}`);
+console.log(`return grade = ${gradeQuiz(candidateAnswers)}`);
+console.log(questions.length)
+console.log(candidateAnswers)
 }
 
 
