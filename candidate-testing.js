@@ -19,7 +19,7 @@ let correctAnswers = ["Sally Ride",
                       "Trajectory",
                       "3"];
 let candidateAnswers =[];
-let grade;
+let grade = 0;
 let numCorrect = 0;
 const numQuestions = 5;
 let testStatus;
