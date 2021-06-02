@@ -38,14 +38,13 @@ for (let i = 0; i < questions.length; i++){
   candidateAnswers.push(input.question(questions[i]));
 }
 
-
+return candidateAnswers;
 };
 
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
 
 
 
@@ -60,16 +59,17 @@ for (i = 0; i < candidateAnswers.length; i++) {
 grade = (numCorrect / numQuestions) * 100
 
 
+};
 
 if (grade >= 80){
   testStatus = "Passed";
-} else {
-  testStatus = "failed";
-}
-
-
  
+} else {
+  testStatus = "Failed";
+ 
+
 };
+
 
 
 
