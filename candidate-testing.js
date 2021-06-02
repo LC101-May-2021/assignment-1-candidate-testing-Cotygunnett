@@ -114,9 +114,9 @@ console.log("\n");
 
 console.log(`>>> Overall Grade: ${grade}% (${numCorrect} of 5 responses correct) <<<`);
 console.log(`>>> Status: ${testStatus} <<<`);
-//console.log(`grade = ${grade}`);
+console.log(`grade = ${grade}`);
 //console.log(`return grade = ${gradeQuiz(candidateAnswers)}`);
-//console.log(`numCorrect = ${numCorrect}`);
+console.log(`numCorrect = ${numCorrect}`);
 }
 
 
