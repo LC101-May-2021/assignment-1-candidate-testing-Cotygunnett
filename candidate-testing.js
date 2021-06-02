@@ -20,7 +20,7 @@ let correctAnswers = ["Sally Ride",
                       "3"];
 let candidateAnswers =[];
 let grade = 0;
-let numCorrect = 0;
+//let numCorrect = 0;
 const numQuestions = 5;
 let testStatus;
 
@@ -46,7 +46,7 @@ return candidateAnswers;
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
+let numCorrect = 0;
 
 
 
@@ -54,10 +54,11 @@ function gradeQuiz(candidateAnswers) {
 for (i = 0; i < candidateAnswers.length; i++) {
   if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
     numCorrect += 1
-  } 
+  }
+ 
 };
 
-grade = numCorrect / numQuestions * 100
+grade = (numCorrect / numQuestions)* 100
 return grade;
 
 };
