@@ -19,7 +19,7 @@ let correctAnswers = ["Sally Ride",
                       "Trajectory",
                       "3"];
 let candidateAnswers =[];
-let grade = 0;
+//let grade = 0;
 //let numCorrect = 0;
 const numQuestions = 5;
 let testStatus;
@@ -27,6 +27,7 @@ let testStatus;
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 candidateName = input.question("Please enter your name.")
+
 return candidateName;
 };
 
@@ -47,30 +48,40 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 let numCorrect = 0;
+let grade;
 
-
-
+console.log(`Candidate Name: ${candidateName}`);
  
 for (i = 0; i < candidateAnswers.length; i++) {
   if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-    numCorrect += 1
+    numCorrect++
   }
- 
+  console.log(`Candidate Name: ${candidateName}`);
+  console.log(`\n${i+1} ${questions[i]}`);
+ console.log(`\nYour answer: ${candidateAnswers[i]}`);
+ console.log(`\nCorrect Answer: ${correctAnswers}`);
 };
 
-grade = (numCorrect / numQuestions)* 100
-return grade;
+grade = (numCorrect / questions.length) * 100
 
-};
+
+
 
 if (grade >= 80){
   testStatus = "Passed";
  
 } else {
   testStatus = "Failed";
+}
 
+
+
+
+console.log(`>>> Overall Grade: ${grade}% (${numCorrect} of 5 responses correct) <<<`);
+console.log(`>>> Status: ${testStatus} <<<`);
+
+return grade;
 };
-
 
 
 
@@ -84,9 +95,9 @@ function runProgram() {
   gradeQuiz(this.candidateAnswers);
   
   
-  console.log(`Candidate Name: ${candidateName}`);
+ // console.log(`Candidate Name: ${candidateName}`);
 
-
+/*
 console.log(`1) ${questions[0]}`);
 console.log(`Your Answer: ${candidateAnswers[0]}`);
 console.log(`CorrectAnswer: ${correctAnswers[0]}`);
@@ -113,13 +124,12 @@ console.log(`CorrectAnswer: ${correctAnswers[4]}`);
 console.log("\n");
 
 
-console.log(`>>> Overall Grade: ${grade}% (${numCorrect} of 5 responses correct) <<<`);
-console.log(`>>> Status: ${testStatus} <<<`);
+
 console.log(`grade = ${grade}`);
 console.log(`numCorrect = ${numCorrect}`);
 console.log(`return grade = ${gradeQuiz(candidateAnswers)}`);
 console.log(questions.length)
-console.log(candidateAnswers)
+console.log(candidateAnswers)*/
 }
 
 
